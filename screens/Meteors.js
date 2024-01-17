@@ -37,26 +37,10 @@ export default class MeteorScreen extends Component {
             })
     }
     //Defina função keyExtractor
-    keyExtractor = (item, index) => index.toString();
+   
 
     //Defina função para renderizar itens na FlatList
-    renderItem = ({ item }) => {
-        let meteor = item;
-        let bg_img, speed, size;
-        if (meteor.threat_score <= 30) {
-            bg_img = require("../assets/meteor_bg1.png")
-            speed = require("../assets/meteor_speed3.gif")
-            size = 100
-        } else if (meteor.threat_score <= 75) {
-            bg_img = require("../assets/meteor_bg2.png")
-            speed = require("../assets/meteor_speed3.gif")
-            size = 150
-        } else {
-            bg_img = require("../assets/meteor_bg3.png")
-            speed = require("../assets/meteor_speed3.gif")
-            size = 200
-        }
-    };
+   
 
     render() {
         if (Object.keys(this.state.meteors).length === 0) {
